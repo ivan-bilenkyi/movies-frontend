@@ -15,6 +15,7 @@ import MovieDetailsPage from './features/movies/pages/MovieDetailsPage';
 import ProtectedRoute from './features/auth/ProtectedRoute';
 import api from './api/axios';
 import toast from 'react-hot-toast';
+import RestrictedRoute from './features/auth/RestrictedRoute';
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -48,8 +49,23 @@ export default function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Navigate to="/movies" replace />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute redirectTo="/movies">
+                <LoginPage />
+              </RestrictedRoute>
+            }
+          />
+
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute redirectTo="/movies">
+                <RegisterPage />
+              </RestrictedRoute>
+            }
+          />
 
           <Route
             path="/movies"
