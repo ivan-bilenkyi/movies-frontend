@@ -1,0 +1,57 @@
+.movie-card {
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 8px;
+  background-color: #e5e5e5;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+.movie-description {
+  flex: 1;
+  min-width: 0;
+}
+
+.movie-actors {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.movie-card:last-of-type {
+  margin-bottom: 0;
+}
+
+.movie-image {
+  width: 80px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.movie-card .movie-trash-button {
+  display: none;
+  transition: opacity 0.3s;
+}
+
+.movie-card:hover .movie-trash-button {
+  display: block;
+  background: none;
+  border: 0.5px solid #333;
+  color: #ff4d4f;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+  opacity: 1;
+  border-radius: 4px;
+}

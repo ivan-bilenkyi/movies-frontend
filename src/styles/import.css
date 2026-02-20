@@ -1,0 +1,94 @@
+/* Import Movies */
+.import-movies {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.import-info {
+  margin-bottom: 16px;
+}
+
+.import-info div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.import-info p {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.import-info small {
+  color: #999;
+  font-size: 12px;
+}
+
+.import-error {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  border: 1px solid #fecaca;
+}
+
+.import-success {
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  border: 1px solid #bbf7d0;
+}
+
+.import-label {
+  display: block;
+  cursor: pointer;
+}
+
+.import-input {
+  display: none;
+}
+
+.import-input:disabled + .import-button {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.import-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+  text-align: center;
+}
+
+.import-label:hover .import-button {
+  background: #1a1a1a;
+}
+
+.import-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .import-movies {
+    padding: 16px;
+  }
+
+  .import-button {
+    width: 100%;
+    padding: 14px 16px;
+  }
+}

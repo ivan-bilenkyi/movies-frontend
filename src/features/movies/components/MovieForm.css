@@ -1,0 +1,51 @@
+.movie-form {
+  max-width: 520px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f8f8f9;
+  border: 1px solid #e6e6e8;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+.field label {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 6px;
+}
+.field input {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.actions button {
+  padding: 10px 16px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+button[disabled] {
+  opacity: 0.6;
+}
+.error {
+  color: #b00020;
+  margin-top: 10px;
+}
+.success {
+  color: #0a8a3f;
+  margin-top: 10px;
+}
